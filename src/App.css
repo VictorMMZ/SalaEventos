@@ -1,0 +1,1069 @@
+  :root {
+            --pink: #ff3b91;
+            --pink-light: #fff0f7;
+
+            --blue: #168de2;
+            --blue-light: #eef8ff;
+
+            --purple: #7846dc;
+            --purple-light: #f2edff;
+
+            --green: #42bd38;
+            --green-light: #effbea;
+
+            --yellow: #ffc928;
+            --yellow-light: #fff8d9;
+
+            --dark: #18234b;
+            --gray: #68708a;
+            --light: #f8f9fc;
+
+            --white: #ffffff;
+
+            --radius: 22px;
+            --shadow: 0 10px 30px rgba(40, 45, 90, .10);
+        }
+
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            color: var(--dark);
+            background: #fff;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font-family: inherit;
+        }
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+
+        /* =========================================================
+           DECORACIÓN
+        ========================================================= */
+
+        .star {
+            position: absolute;
+            font-size: 25px;
+            z-index: 2;
+        }
+
+        .star.pink {
+            color: var(--pink);
+        }
+
+        .star.blue {
+            color: var(--blue);
+        }
+
+        .star.yellow {
+            color: var(--yellow);
+        }
+
+        .star.purple {
+            color: var(--purple);
+        }
+
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        header {
+            height: 75px;
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, .06);
+        }
+
+        .header-container {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: "Fredoka", sans-serif;
+            font-size: 27px;
+            font-weight: 700;
+        }
+
+        .logo .pink {
+            color: var(--pink);
+        }
+
+        .logo .blue {
+            color: var(--blue);
+        }
+
+        .logo .yellow {
+            color: var(--yellow);
+        }
+
+        .logo .purple {
+            color: var(--purple);
+        }
+
+        .logo small {
+            display: block;
+            color: var(--pink);
+            font-family: "Poppins", sans-serif;
+            font-size: 8px;
+            text-align: center;
+            margin-top: -6px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 34px;
+        }
+
+        nav a {
+            font-size: 13px;
+            font-weight: 600;
+            transition: .25s;
+        }
+
+        nav a:hover {
+            color: var(--pink);
+        }
+
+        .btn {
+            border: none;
+            border-radius: 12px;
+            padding: 13px 24px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: .25s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
+        }
+
+        .btn-pink {
+            background: var(--pink);
+            color: white;
+        }
+        
+
+        .btn-green {
+            background: var(--green);
+            color: white;
+        }
+        .btn-purple {
+            background: var(--purple);
+            color: white;
+        }
+
+        .btn-blue {
+            background: var(--blue);
+            color: white;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--purple);
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            min-height: 510px;
+            position: relative;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(20, 25, 70, .82) 0%,
+                    rgba(20, 25, 70, .50) 45%,
+                    rgba(20, 25, 70, .05) 100%
+                ),
+                url("https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1800&q=85");
+
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            color: white;
+            position: relative;
+            z-index: 3;
+        }
+
+        .hero-content small {
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #ffd52c;
+        }
+
+        .hero h1 {
+            font-family: "Fredoka", sans-serif;
+            font-size: clamp(42px, 6vw, 70px);
+            line-height: .98;
+            max-width: 620px;
+            margin: 12px 0 22px;
+        }
+
+        .hero h1 span {
+            display: block;
+            background: linear-gradient(
+                90deg,
+                #ff4a9b,
+                #8c5bea,
+                #20a9ee,
+                #ffc928
+            );
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            max-width: 540px;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+
+        /* =========================================================
+           SECTION GENERAL
+        ========================================================= */
+
+        section {
+            position: relative;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title small {
+            display: block;
+            color: var(--purple);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 7px;
+        }
+
+        .section-title h2 {
+            font-family: "Fredoka", sans-serif;
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--gray);
+            max-width: 650px;
+            margin: auto;
+            font-size: 14px;
+        }
+
+
+        /* =========================================================
+           BENEFITS
+        ========================================================= */
+
+        .benefits {
+            margin-top: -45px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .benefit {
+            background: white;
+            border-radius: 18px;
+            padding: 23px;
+            box-shadow: var(--shadow);
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .benefit-icon {
+            min-width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            display: grid;
+            place-items: center;
+            font-size: 25px;
+        }
+
+        .benefit:nth-child(1) .benefit-icon {
+            background: #eee5ff;
+        }
+
+        .benefit:nth-child(2) .benefit-icon {
+            background: #fff2cf;
+        }
+
+        .benefit:nth-child(3) .benefit-icon {
+            background: #dff8df;
+        }
+
+        .benefit:nth-child(4) .benefit-icon {
+            background: #e0f4ff;
+        }
+
+        .benefit h3 {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .benefit p {
+            color: var(--gray);
+            font-size: 11px;
+            line-height: 1.6;
+        }
+
+
+        /* =========================================================
+           SALAS
+        ========================================================= */
+
+        .rooms {
+            background: white;
+        }
+
+        .rooms-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .room {
+            border-radius: 18px;
+            overflow: hidden;
+            background: white;
+            border: 2px solid;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .06);
+            transition: .3s;
+        }
+
+        .room:hover {
+            transform: translateY(-8px);
+        }
+
+        .room:nth-child(1) {
+            border-color: #8b63eb;
+        }
+
+        .room:nth-child(2) {
+            border-color: var(--pink);
+        }
+
+        .room:nth-child(3) {
+            border-color: var(--blue);
+        }
+
+        .room-image {
+            height: 235px;
+            overflow: hidden;
+        }
+
+        .room-image img {
+            height: 100%;
+            object-fit: cover;
+            transition: .4s;
+        }
+
+        .room:hover img {
+            transform: scale(1.06);
+        }
+
+        .room-content {
+            padding: 22px;
+        }
+
+        .room-content h3 {
+            font-family: "Fredoka", sans-serif;
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .room:nth-child(1) h3 {
+            color: var(--purple);
+        }
+
+        .room:nth-child(2) h3 {
+            color: var(--pink);
+        }
+
+        .room:nth-child(3) h3 {
+            color: var(--blue);
+        }
+
+        .room-content ul {
+            list-style: none;
+            margin: 15px 0 20px;
+        }
+
+        .room-content li {
+            font-size: 12px;
+            color: var(--gray);
+            margin: 7px 0;
+        }
+
+        .room-content li::before {
+            content: "•";
+            margin-right: 8px;
+            color: var(--pink);
+            font-weight: bold;
+        }
+
+
+        /* =========================================================
+           GALERÍA
+        ========================================================= */
+
+        .gallery {
+            background: linear-gradient(
+                180deg,
+                #fffdf0,
+                #fff9dc
+            );
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 13px;
+        }
+
+        .gallery-item {
+            height: 170px;
+            overflow: hidden;
+            border-radius: 14px;
+        }
+
+        .gallery-item:nth-child(1),
+        .gallery-item:nth-child(4) {
+            grid-column: span 2;
+        }
+
+        .gallery-item:nth-child(2),
+        .gallery-item:nth-child(3),
+        .gallery-item:nth-child(5),
+        .gallery-item:nth-child(6) {
+            grid-column: span 1;
+        }
+
+        .gallery-item img {
+            height: 100%;
+            object-fit: cover;
+            transition: .4s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-button {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+
+        /* =========================================================
+           PRECIOS
+        ========================================================= */
+
+        .pricing {
+            background: white;
+            overflow: hidden;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            align-items: stretch;
+        }
+
+        .pricing-card {
+            position: relative;
+            padding: 35px 30px;
+            border-radius: 20px;
+            border: 2px solid;
+            text-align: center;
+            background: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-card:nth-child(1) {
+            border-color: #75baff;
+        }
+
+        .pricing-card:nth-child(2) {
+            border-color: var(--pink);
+            background: #fff8fc;
+        }
+
+        .pricing-card:nth-child(3) {
+            border-color: #2aad1e;
+        }
+
+        .pricing-card h3 {
+            font-family: "Fredoka", sans-serif;
+            font-size: 23px;
+        }
+
+        .pricing-card a {
+    margin-top: auto;
+}
+
+
+        .pricing-card:nth-child(1) h3 {
+            color: var(--blue);
+        }
+
+        .pricing-card:nth-child(2) h3 {
+            color: var(--pink);
+        }
+
+        .pricing-card:nth-child(3) h3 {
+            color: var(--green);
+        }
+
+        .price {
+            margin: 10px 0 15px;
+        }
+
+        .price small {
+            display: block;
+            color: var(--gray);
+            font-size: 11px;
+        }
+
+        .price strong {
+            font-family: "Fredoka", sans-serif;
+            font-size: 38px;
+        }
+
+        .pricing-card:nth-child(1) .price strong {
+            color: var(--blue);
+        }
+
+        .pricing-card:nth-child(2) .price strong {
+            color: var(--pink);
+        }
+
+        .pricing-card:nth-child(3) .price strong {
+            color: var(--green);
+        }
+
+        .pricing-card > p {
+            color: var(--gray);
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        .pricing-card ul {
+            text-align: left;
+            list-style: none;
+            margin: 25px 0;
+        }
+
+        .pricing-card li {
+            font-size: 12px;
+            margin: 10px 0;
+            color: var(--gray);
+        }
+
+        .pricing-card li::before {
+            content: "✓";
+            margin-right: 9px;
+            color: var(--green);
+            font-weight: 800;
+        }
+
+        .popular {
+            position: absolute;
+            top: -14px;
+            right: 18px;
+            background: var(--pink);
+            color: white;
+            border-radius: 20px;
+            padding: 5px 13px;
+            font-size: 10px;
+            font-weight: 700;
+            transform: rotate(4deg);
+        }
+
+
+        /* =========================================================
+           POR QUÉ NOSOTROS
+        ========================================================= */
+
+        .why {
+            background: white;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .why-image {
+            height: 440px;
+            border-radius: 30px;
+            overflow: hidden;
+        }
+
+        .why-image img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .why-content small {
+            color: var(--pink);
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        .why-content h2 {
+            font-family: "Fredoka", sans-serif;
+            font-size: 38px;
+            line-height: 1.1;
+            margin: 10px 0 18px;
+        }
+
+        .why-content > p {
+            color: var(--gray);
+            line-height: 1.7;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .advantages {
+            display: grid;
+            gap: 16px;
+            margin-bottom: 25px;
+        }
+
+        .advantage {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .advantage-icon {
+            width: 43px;
+            height: 43px;
+            border-radius: 50%;
+            background: #edf9ed;
+            display: grid;
+            place-items: center;
+            color: var(--green);
+            font-weight: bold;
+        }
+
+        .advantage h3 {
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+
+        .advantage p {
+            color: var(--gray);
+            font-size: 11px;
+        }
+
+
+        /* =========================================================
+           RESERVA
+        ========================================================= */
+
+        .reservation {
+            background: linear-gradient(
+                135deg,
+                #f3edff,
+                #fff0f8
+            );
+        }
+
+        .reservation-grid {
+            display: grid;
+            grid-template-columns: 1.3fr .7fr;
+            gap: 25px;
+            align-items: stretch;
+        }
+
+        .reservation-form {
+            background: white;
+            padding: 35px;
+            border-radius: 22px;
+            box-shadow: var(--shadow);
+        }
+
+        .reservation-form h2 {
+            font-family: "Fredoka", sans-serif;
+            font-size: 30px;
+            margin-bottom: 5px;
+        }
+
+        .reservation-form > p {
+            color: var(--gray);
+            font-size: 12px;
+            margin-bottom: 25px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 17px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            border: 1px solid #dddff0;
+            border-radius: 10px;
+            padding: 12px 13px;
+            outline: none;
+            font-size: 12px;
+            background: #fafaff;
+            transition: .2s;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: var(--purple);
+            background: white;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .privacy {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 15px 0 20px;
+        }
+
+        .privacy input {
+            width: auto;
+        }
+
+        .privacy label {
+            font-weight: 400;
+            color: var(--gray);
+        }
+
+        .btn-full {
+            width: 100%;
+        }
+
+
+        /* =========================================================
+           PASOS
+        ========================================================= */
+
+        .reservation-info {
+            background: #fff2f9;
+            border-radius: 22px;
+            padding: 35px;
+        }
+
+        .reservation-info h3 {
+            font-family: "Fredoka", sans-serif;
+            font-size: 27px;
+            margin-bottom: 25px;
+        }
+
+        .step {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 28px;
+        }
+
+        .step-number {
+            min-width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: white;
+            color: var(--pink);
+            display: grid;
+            place-items: center;
+            font-weight: 800;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .06);
+        }
+
+        .step h4 {
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .step p {
+            color: var(--gray);
+            font-size: 11px;
+            line-height: 1.6;
+        }
+
+
+        /* =========================================================
+           CONTACTO
+        ========================================================= */
+
+        .contact {
+            background: var(--blue-light);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .contact-card {
+            background: white;
+            border-radius: 18px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .contact-icon {
+            font-size: 30px;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .contact-card h3 {
+            font-family: "Fredoka", sans-serif;
+            font-size: 17px;
+            margin-bottom: 7px;
+        }
+
+        .contact-card p {
+            color: var(--gray);
+            font-size: 11px;
+            line-height: 1.7;
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            background: linear-gradient(
+                90deg,
+                #7440dd,
+                #8c4de4
+            );
+            color: white;
+            padding-top: 45px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 50px;
+            padding-bottom: 40px;
+        }
+
+        footer h3 {
+            font-family: "Fredoka", sans-serif;
+            margin-bottom: 13px;
+        }
+
+        footer p,
+        footer a {
+            color: rgba(255,255,255,.85);
+            font-size: 11px;
+            line-height: 2;
+        }
+
+        footer a {
+            display: block;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .footer-logo {
+            font-family: "Fredoka", sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.2);
+            padding: 17px 0;
+            text-align: center;
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 900px) {
+
+            nav {
+                gap: 12px;
+            }
+
+            nav a:not(.btn) {
+                display: none;
+            }
+
+            .benefits-grid,
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .rooms-grid,
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-grid,
+            .reservation-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .gallery-item,
+            .gallery-item:nth-child(1),
+            .gallery-item:nth-child(4) {
+                grid-column: span 1;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .hero {
+                min-height: 620px;
+            }
+
+            .hero h1 {
+                font-size: 46px;
+            }
+
+            .benefits-grid,
+            .contact-grid,
+            .form-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits {
+                margin-top: -20px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-item {
+                height: 140px;
+            }
+
+            .why-image {
+                height: 330px;
+            }
+
+            .reservation-form,
+            .reservation-info {
+                padding: 25px;
+            }
+        }
